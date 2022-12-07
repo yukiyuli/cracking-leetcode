@@ -1,10 +1,16 @@
 # 代码随想录算法训练 Day 1 | 数组
 
 Completed: December 7, 2022
-Difficulty: Easy
-Done: No
-Redo: No
+
 Topic: Array, Binary Search
+
+Difficulty: Easy
+
+- [ ] Done
+
+- [ ] Redo
+
+
 
 ## ****数组理论基础****
 
@@ -17,7 +23,7 @@ Topic: Array, Binary Search
 
 举一个字符数组的例子，如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%201%20%E6%95%B0%E7%BB%84%20b1f1f797dbea4d4280ceadc4781701db/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/206104315-6c03d91b-7ea0-4fc6-9d53-7faa6fffad4b.png)
 
 需要两点注意的是：
 
@@ -28,17 +34,19 @@ Topic: Array, Binary Search
 
 例如删除下标为3的元素，需要对下标为3的元素后面的所有元素都要做移动操作，如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%201%20%E6%95%B0%E7%BB%84%20b1f1f797dbea4d4280ceadc4781701db/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/206104333-54233032-3002-4d7b-b552-f16715139bdb.png)
 
 **数组的元素是不能删的，只能覆盖。**
 
 二维数组：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%201%20%E6%95%B0%E7%BB%84%20b1f1f797dbea4d4280ceadc4781701db/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/206104368-bee1d954-c134-4652-a078-cb9008754c50.png)
 
 **那么二维数组在内存的空间地址是连续的么？**
 
 不同编程语言的内存管理是不一样的，**C++中二维数组在地址空间上是连续的**。**Java的二维数组是不绚丽的。**
+
+
 
 ## ****704. 二分查找****
 
@@ -58,7 +66,7 @@ Topic: Array, Binary Search
 - while (left <= right) 要使用 <= ，因为left == right是有意义的，所以使用 <=
 - if (nums[middle] > target) right 要赋值为 middle - 1，因为当前这个nums[middle]一定不是target，那么接下来要查找的左区间结束下标位置就是 middle - 1
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%201%20%E6%95%B0%E7%BB%84%20b1f1f797dbea4d4280ceadc4781701db/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/206104409-8a47d37c-b24b-42bb-a54a-c01125b16fc4.png)
 
 Javascript代码：
 
@@ -93,8 +101,9 @@ var search = function(nums, target) {
 - while (left < right)，这里使用 < ,因为left == right在区间[left, right)是没有意义的
 - if (nums[middle] > target) right 更新为 middle，因为当前nums[middle]不等于target，去左区间继续寻找，而寻找区间是左闭右开区间，所以right更新为middle，即：下一个查询区间不会去比较nums[middle]
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%201%20%E6%95%B0%E7%BB%84%20b1f1f797dbea4d4280ceadc4781701db/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/206104469-a850a9c5-7a03-4d49-b028-3fb5151660ae.png)
 
+Javascript代码：
 ```jsx
 /**
  * @param {number[]} nums
@@ -121,6 +130,8 @@ var search = function(nums, target) {
 };
 ```
 
+
+
 ## 27. 移除元素
 
 [leetcode link](https://leetcode.cn/problems/remove-element/)
@@ -139,6 +150,7 @@ var search = function(nums, target) {
 - 快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组
 - 慢指针：指向更新 新数组下标的位置
 
+Javascript代码：
 ```jsx
 var removeElement = function(nums, val) {
   // 初始慢指针在0位置
