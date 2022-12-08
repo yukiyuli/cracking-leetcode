@@ -1,10 +1,16 @@
 # 代码随想录算法训练 Day 2 | 数组
 
 Completed: December 8, 2022
-Difficulty: Medium
-Done: Yes
-Redo: No
+
 Topic: Array
+
+Difficulty: Medium
+
+- [x] Done
+
+- [ ] Redo
+
+
 
 ## ****977.有序数组的平方****
 
@@ -80,7 +86,7 @@ var sortedSquares = function(nums) {
 
 **动画：**
 
-![https://code-thinking.cdn.bcebos.com/gifs/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.gif](https://code-thinking.cdn.bcebos.com/gifs/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.gif)
+![209 长度最小的子数组](https://user-images.githubusercontent.com/101588752/206372734-0da74a09-d581-4e1d-80a0-0fae631b7e9e.gif)
 
 JavaScript代码：
 
@@ -119,7 +125,7 @@ var minSubArrayLen = function(target, nums) {
 
 左闭右开
 
-![IMG_0662.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%202%20%E6%95%B0%E7%BB%84%20d09d522d81094cc38b30831726f2952c/IMG_0662.jpg)
+![IMG_0662](https://user-images.githubusercontent.com/101588752/206371742-f43db7bb-8222-4d80-b681-f16fe582abdd.jpg)
 
 JavaScript代码：
 
