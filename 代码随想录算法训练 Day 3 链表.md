@@ -1,10 +1,15 @@
 # 代码随想录算法训练 Day 3 | 链表
 
 Completed: December 10, 2022
-Difficulty: Easy
-Done: Yes
-Redo: No
+
 Topic: Linked List
+
+Difficulty: Easy
+
+- [x] Done 
+
+- [ ] Redo
+
 
 ## 链表理论基础
 
@@ -16,7 +21,8 @@ Topic: Linked List
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/206837883-c949d899-c661-4b85-9dae-533dd5e2a92a.png)
+
 
 ## ****链表的类型****
 
@@ -34,7 +40,7 @@ Topic: Linked List
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/206837894-99f6bd74-0588-4e43-a902-895734e2b5fe.png)
 
 ### ****循环链表****
 
@@ -42,7 +48,7 @@ Topic: Linked List
 
 循环链表可以用来解决约瑟夫环问题。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/206837901-1b0164e9-08e4-499a-a4f8-9cfc61771244.png)
 
 ## ****链表的存储方式****
 
@@ -54,7 +60,7 @@ Topic: Linked List
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/206837906-f6339dea-884d-4fcb-8dd8-a6d656aba8cf.png)
 
 这个链表起始节点为2， 终止节点为7， 各个节点分布在内存的不同地址空间上，通过指针串联在一起。
 
@@ -79,7 +85,7 @@ class ListNode {
 
 删除D节点，如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/206837912-e08d6bd5-9514-4093-8e5e-b45b9a1a37a7.png)
 
 只要将C节点的next指针 指向E节点就可以了。
 
@@ -93,7 +99,7 @@ class ListNode {
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/206837921-131cfc3f-4ce0-4533-b443-2aba61280e69.png)
 
 可以看出链表的增添和删除都是O(1)操作，也不会影响到其他节点。
 
@@ -103,7 +109,7 @@ class ListNode {
 
 再把链表的特性和数组的特性进行一个对比，如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/206837931-cb2935db-f084-44fc-b4cf-e6b0b13aa2f1.png)
 
 数组在定义的时候，长度就是固定的，如果想改动数组的长度，就需要重新定义一个新的数组。
 
@@ -119,7 +125,7 @@ class ListNode {
 
 因为单链表的特殊性，只能指向下一个节点，刚刚删除的是链表的中第二个，和第四个节点。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/101588752/206837943-2e6fa4e2-830d-48a5-8486-ea4ad7b4b88d.png)
 
 如果删除的是头结点，有两种方式：
 
@@ -128,15 +134,15 @@ class ListNode {
 
 第一种方式：直接使用原来的链表来进行移除。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/101588752/206837950-40a180fe-447b-4a7d-8d69-a80a3ee01865.png)
 
 移除头结点和移除其他节点的操作是不一样的，因为链表的其他节点都是通过前一个节点来移除当前节点，而头结点没有前一个节点。
 
 所以头结点如何移除呢，其实只要将头结点向后移动一位就可以，这样就从链表中移除了一个头结点。但是在单链表中移除头结点和移除其他节点的操作方式是不一样，在写代码时需要单独写一段逻辑来处理移除头结点的情况。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/101588752/206837962-37db406f-f35a-4b22-b974-43a8e14777b7.png)
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/101588752/206837966-e6c46c87-2a78-43aa-b90b-344189a91f38.png)
 
 第二种方式：设置一个虚拟头结点。
 
@@ -144,7 +150,7 @@ class ListNode {
 
 如何设置一个虚拟头。依然还是在这个链表中，移除元素1。给链表添加一个虚拟头结点为新的头结点，此时要移除这个旧头结点元素1。移除元素1的方式还是指向下一个节点。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/101588752/206837977-a93efc9f-6638-4294-b6d2-db20cbe18d90.png)
 
 > 注意：return头结点的时候，不要忘了dummyNode. next; ，这才是新的头结点。
 > 
@@ -227,19 +233,19 @@ var removeElements = function(head, val) {
 
 因为操作完链表需要返回头节点，如果直接操作头节点，头节点的值被改，就无法返回头节点.
 
-![IMG_0663.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/IMG_0663.jpg)
+![IMG_0663](https://user-images.githubusercontent.com/101588752/206838011-a1bfe46a-0e34-4a21-be26-12996d10bbe2.jpg)
 
 1. **插入头节点**
 
-![IMG_0663 2.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/IMG_0663_2.jpg)
+![IMG_0663_2](https://user-images.githubusercontent.com/101588752/206838023-efd9bf82-48f7-49b8-a1f4-14c7420a8926.jpg)
 
 1. **插入第n个节点**
 
-![IMG_0664.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/IMG_0664.jpg)
+![IMG_0664](https://user-images.githubusercontent.com/101588752/206838029-36023921-880e-4dfd-9747-ffaa9eb5c3ce.jpg)
 
 1. **删除第n个节点**
 
-![IMG_0663 3.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/IMG_0663_3.jpg)
+![IMG_0663_3](https://user-images.githubusercontent.com/101588752/206838037-60be50fd-c393-40e2-ad46-6d223e183b5f.jpg)
 
 完整代码：
 
@@ -359,7 +365,8 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
 
 改变链表的next指针的指向，直接将链表反转 ，而不用重新定义一个新的链表，如图所示:
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%203%20%E9%93%BE%E8%A1%A8%20863c6e12719044cb9ae658dd34fb9529/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/101588752/206838048-27ecc0a1-7187-445d-b7ad-778298fe9e4c.png)
+
 
 之前链表的头节点是元素1， 反转之后头结点就是元素5 ，这里并没有添加或者删除节点，仅仅是改变next指针的方向。
 
