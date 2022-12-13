@@ -1,10 +1,15 @@
 # 代码随想录算法训练 Day 4 | 链表
 
 Completed: December 12, 2022
-Difficulty: Medium
-Done: Yes
-Redo: No
+
 Topic: Linked List
+
+Difficulty: Medium
+
+[ ] Done
+
+[ ] Redo
+
 
 ## ****24. 两两交换链表中的节点****
 
@@ -21,7 +26,7 @@ Topic: Linked List
 
 接下来交换相邻两个元素，注意顺序，并定义两个临时变量，存储节点。
 
-![IMG_0667.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0667.jpg)
+![IMG_0667](https://user-images.githubusercontent.com/101588752/207208896-f158d8ce-e98c-4195-8f21-4b1e3567c1d2.jpg)
 
 什么时候终止遍历？
 
@@ -33,7 +38,7 @@ cur.next=null
 cur,next.next=null
 ```
 
-![IMG_0667 2.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0667_2.jpg)
+![IMG_0667_2](https://user-images.githubusercontent.com/101588752/207208918-da15b617-e821-44cc-b814-662c063c3ef7.jpg)
 
 一定要先写偶数链表，不然会出现空指针。
 
@@ -77,15 +82,15 @@ var swapPairs = function(head) {
 - 老规矩，先设置一个虚拟头节点。
 - 定义两个快慢指针，fast，slow都指向虚拟头结点，如图：
     
-    ![IMG_0669.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0669.jpg)
+![IMG_0669](https://user-images.githubusercontent.com/101588752/207208960-ab30d891-f5ba-4fdd-9a36-d285337de59a.jpg)
     
 - fast首先走n + 1步，因为只有这样同时移动的时候slow才能指向删除节点的上一个节点（方便做删除操作），如图：
     
-    ![IMG_0669 2.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0669_2.jpg)
+![IMG_0669_2](https://user-images.githubusercontent.com/101588752/207208985-5602f409-8937-4212-bb56-2ca8b8953ef3.jpg)
     
 - fast和slow同时移动，直到fast指向末尾，slow指针必须指向要删除节点的前一个节点，如图：
 
-![IMG_0669 3.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0669_3.jpg)
+![IMG_0669_3](https://user-images.githubusercontent.com/101588752/207209006-ad007fd6-6d2f-4e12-b6c3-834e1c7b8e40.jpg)
 
 完整代码：
 
@@ -130,11 +135,11 @@ var removeNthFromEnd = function(head, n) {
 
 1. 定义两个指针，curA指向链表A的头部，curB指向链表B的头部。
     
-    ![IMG_0672.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0672.jpg)
+![IMG_0672](https://user-images.githubusercontent.com/101588752/207209047-ca2fd613-597a-43a2-b25b-0e5199481aeb.jpg)
     
 2. 求出两个链表的长度，并求出两个链表长度的差值，然后让curA移动到，和curB 末尾对齐的位置。
     
-    ![IMG_0672 2.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0672_2.jpg)
+![IMG_0672_2](https://user-images.githubusercontent.com/101588752/207209081-fbeea72b-49b7-4d30-8560-dd732114af4c.jpg)
     
 3. 比较curA和curB是否相同，如果不相同，同时向后移动curA和curB，如果遇到curA == curB，则找到交点。否则循环退出返回空指针。
 
@@ -195,7 +200,9 @@ var getIntersectionNode = function(headA, headB) {
 
 可以使用快慢指针法，分别定义 fast 和 slow 指针，从头结点出发，fast指针每次移动两个节点，slow指针每次移动一个节点，如果 fast 和 slow指针在途中相遇 ，说明这个链表有环。
 
-> 为什么fast 走两个节点，slow走一个节点，有环的话，一定会在环内相遇呢，而不是永远的错开呢？           首先：**fast指针一定先进入环中，如果fast指针和slow指针相遇的话，一定是在环中相遇。**                     其次：fast是走两步，slow是走一步，**其实相对于slow来说，fast是一个节点一个节点的靠近slow的**
+> 为什么fast 走两个节点，slow走一个节点，有环的话，一定会在环内相遇呢，而不是永远的错开呢？           
+> 首先：**fast指针一定先进入环中，如果fast指针和slow指针相遇的话，一定是在环中相遇。**                  
+> 其次：fast是走两步，slow是走一步，**其实相对于slow来说，fast是一个节点一个节点的靠近slow的**
 ，所以fast一定可以和slow重合。
 > 
 
@@ -207,7 +214,8 @@ var getIntersectionNode = function(headA, headB) {
 
 假设从头结点到环形入口节点 的节点数为x。 环形入口节点到 fast指针与slow指针相遇节点 节点数为y。 从相遇节点 再到环形入口节点节点数为 z。 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/207209121-d37f237e-6fc1-4080-891e-b1e8dbfad57f.png)
+
 
 相遇时slow指针走过的节点数为: `x + y`， fast指针走过的节点数：`x + y + n (y + z)`，n为fast指针在环内走了n圈才遇到slow指针， （y+z）为 一圈内节点的个数A。
 
@@ -238,7 +246,7 @@ var getIntersectionNode = function(headA, headB) {
 > 疑问：slow为什么在第一圈的时候被快指针追上？
 > 
 
-![IMG_0674.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0674.jpg)
+![IMG_0674](https://user-images.githubusercontent.com/101588752/207209416-293a8a72-c4ac-43a8-b38d-da45d88f4285.jpg)
 
 JavaScript代码：
 
@@ -293,9 +301,11 @@ var detectCycle = function(head) {
 
 使用虚拟头节点。并让cur指向虚拟头节点。接下来交换相邻两个元素，并定义两个临时变量，存储节点。
 
-![IMG_0667.jpg](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/IMG_0667.jpg)
+![IMG_0667](https://user-images.githubusercontent.com/101588752/207209157-a18dfff8-d920-4694-864a-3b1ba2508613.jpg)
 
-> 注意：                                                                                                                                                                 1. 交换顺序                                                                                                                                                                     2. 终止遍历情况一定要先偶数链表，不然会出现空指针
+> 注意：                                                                                                                                                 
+> 1. 交换顺序                                                                                                                                            
+> 2. 终止遍历情况一定要先偶数链表，不然会出现空指针
 > 
 
 ### ****删除链表的倒数第N个节点****
@@ -319,6 +329,7 @@ var detectCycle = function(head) {
 
 1. 判断环的入口
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%204%20%E9%93%BE%E8%A1%A8%20a3602bc0283d4452b670d1749ace3e86/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/207209172-1a7fc869-dda4-48cb-b433-92c05aa31da6.png)
+
 
 相遇时slow指针走过的节点数为: `x + y`， fast指针走过的节点数：`x + y + n (y + z)`，因为fast指针是一步走两个节点，slow指针一步走一个节点， 所以 fast指针走过的节点数是slow指针走2倍。假设n=1，公式就化解为 `x = z`，也就是一个指针从头走，一个从交点走，两个指针第一次相遇点为入口。
