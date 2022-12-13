@@ -1,10 +1,15 @@
 # 代码随想录算法训练 Day 6 | 哈希表
 
-Completed: December 13, 2022
-Difficulty: Easy
-Done: Yes
-Redo: No
 Topic: HashMap
+
+Completed: December 13, 2022
+
+Difficulty: Easy
+
+- [x] Done
+
+- [ ] Redo
+
 
 ## ****哈希表基本理论****
 
