@@ -6,9 +6,9 @@ Topic: Linked List
 
 Difficulty: Medium
 
-[ ] Done
+- [x] Done
 
-[ ] Redo
+- [ ] Redo
 
 
 ## ****24. 两两交换链表中的节点****
