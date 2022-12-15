@@ -1,10 +1,15 @@
 # 代码随想录算法训练 Day 7 | 哈希表
 
-Completed: December 14, 2022
-Difficulty: Medium
-Done: Yes
-Redo: No
 Topic: HashMap
+
+Difficulty: Medium
+
+Completed: December 14, 2022
+
+- [x] Done
+
+- [ ] Redo
+
 
 ## ****454. 四数相加II****
 
@@ -18,11 +23,12 @@ Topic: HashMap
 4. 再遍历数组nums3,nums4，找到如果0-(c+d) 在map中出现过的话，就用count把map中key对应的value也就是出现次数统计出来。
 5. 最后返回统计值 count 就可以了。
 
-> 为什么先遍历数组nums1,nums2，再遍历nums3,nums4，而不是先遍历数组num1，再遍历数组nums2,nums3,nums4？                   先遍历数组nums1，时间复杂度是n的三次方，先遍历nums1,nums2再遍历nums3,nums4，时间复杂度是两个n的二次方。
+> 为什么先遍历数组nums1,nums2，再遍历nums3,nums4，而不是先遍历数组num1，再遍历数组nums2,nums3,nums4？                   
+> 先遍历数组nums1，时间复杂度是n的三次方，先遍历nums1,nums2再遍历nums3,nums4，时间复杂度是两个n的二次方。
 > 
 
-> 为什么count+=value?                                                                                                                      因为value是统计a+b出现的次数，如果在0-(c+d) 在map出现过，那a+b原本在map中出现的次数是value。
-> 
+> 为什么count+=value?
+> 因为value是统计a+b出现的次数，如果在0-(c+d) 在map出现过，那a+b原本在map中出现的次数是value。                                                              > 
 
 JavaScript完整代码：
 
@@ -114,7 +120,8 @@ var canConstruct = function(ransomNote, magazine) {
 ### 双指针法
 
 > 此题不适合用哈希法，因为这道题需要去重，而哈希法的去重操作需要注意很多细节，并且很费时，很容易超时，所以不推荐使用哈希法。
-> 
+
+
 1. 将数组排序，定义i从下标0开始，定义left=i+1，定义right=nums.size-1。
 2. 用i遍历数组，使a = nums[i]，b = nums[left]，c = nums[right]。
 3. 如果nums[i] + nums[left] + nums[right] > 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。
@@ -132,6 +139,7 @@ var canConstruct = function(ransomNote, magazine) {
 💡 判断nums[i] 与 nums[i + 1]是否相同，还是判断 nums[i] 与 nums[i-1] 是否相同？
 
 </aside>
+
 
 如果判断nums[i]  == nums[i + 1]，就把 三元组中出现重复元素的情况直接pass掉了。 
 
