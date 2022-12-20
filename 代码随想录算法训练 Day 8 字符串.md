@@ -1,10 +1,15 @@
 # 代码随想录算法训练 Day 8 | 字符串
 
-Completed: December 19, 2022
-Difficulty: Easy
-Done: Yes
-Redo: No
 Topic: String
+
+Difficulty: Easy
+
+Completed: December 19, 2022
+
+- [x] Done
+
+- [ ] Redo
+
 
 ## ****344.反转字符串****
 
@@ -120,7 +125,8 @@ var replaceSpace = function(s) {
 
 ![https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif](https://tva1.sinaimg.cn/large/e6c9d24ely1go6qmevhgpg20du09m4qp.gif)
 
-> 为什么要从后向前填充，从前向后填充不行么？从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。
+> 为什么要从后向前填充，从前向后填充不行么？
+> 从前向后填充就是O(n^2)的算法了，因为每次添加元素都要将添加元素之后的所有元素向后移动。
 > 
 
 这么做有两个好处：
@@ -169,7 +175,7 @@ var replaceSpace = function(s) {
 
 ## ****151. 翻转字符串里的单词****
 
-[leetcode link](https://leetcode.cn/problems/4sum/)
+[leetcode link](https://leetcode.cn/problems/reverse-words-in-a-string/)
 
 ### 思路
 
@@ -181,11 +187,11 @@ var replaceSpace = function(s) {
 
 两个单词之间需要一个空格，所以我们必须需要判断slow指针是否指向字符串数组第一个下标，然后接下来每一次都让slow指向的位置都赋值为空格，这样两个不同的单词之间就会产生一个空格了。这里需要特别处理首字母，因为首字母前不需要空格
 
-1. 将整个字符串反转
+2. 将整个字符串反转
 
 双指针法：只需要定义两个指针，分别指向数组的头部和尾部的位置，然后一起往中间靠拢，相互调换位置即可。
 
-1. 将每个单词反转
+3. 将每个单词反转
 
 双指针法：字符串中的空格跟最后一个单词的最后一个字符的位置就是每一次置换位置的判断条件；所以通过第二部的函数合理控制好边界就可以完成每一个单词的翻转。
 
@@ -256,7 +262,7 @@ var reverseWords = function(s) {
 
 例如 ：示例1中 输入：字符串abcdefg，n=2
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%208%20%E5%AD%97%E7%AC%A6%E4%B8%B2%200aaad15eaa72462fb2264fba17de1499/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/208551385-fceb48f7-b5ac-4d43-ac8e-44b529c98d42.png)
 
 > 跟翻转字符串里的单词的区别是，本题是先反转局部再整体，翻转字符串里的单词是先反转整体再局部。
 > 
