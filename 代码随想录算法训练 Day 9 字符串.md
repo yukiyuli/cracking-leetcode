@@ -1,9 +1,13 @@
 # 代码随想录算法训练 Day 9 | 字符串
 
-Completed: December 19, 2022
-Done: Yes
-Redo: No
 Topic: String
+
+Completed: December 19, 2022
+
+- [x] Done: Yes
+
+- [ ] Redo: No
+
 
 ## ****28. 实现 strStr()****
 
