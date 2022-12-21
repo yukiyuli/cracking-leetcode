@@ -1,18 +1,26 @@
 # 代码随想录算法训练 Day 10 | 栈与队列
 
-Completed: December 20, 2022
-Difficulty: Easy
-Done: Yes
-Question: 225. 用队列实现栈, 232.用栈实现队列
-Redo: No
 Topic: Queue, Stack
+
+Question: 225. 用队列实现栈, 232.用栈实现队列
+
+Difficulty: Easy
+
+- [x] Done
+
+- [ ] Redo
+
+Completed: December 20, 2022
+
+
+
 
 ## ****一、栈****
 
 > 栈是一种具有 **「后入先出」(Last-in-First-Out，LIFO)** 特点的抽象数据结构。
 > 
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2010%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%209ae1dadb2edd414bbf1b3e51065f18c4/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/208820533-2543b7f2-c084-419a-accf-efc098c58035.png)
 
 由于栈后入先出的特点，每次只能操作栈顶的元素，任何不在栈顶的元素，都无法访问。要访问下面的元素，先得拿掉上面的元素。所以它是一种高效的数据结构。
 
