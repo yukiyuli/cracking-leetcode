@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 11 | 栈与队列
 
-Completed: December 25, 2022
-Difficulty: Medium
-Done: Yes
-Question: 1047. 删除字符串中的所有相邻重复项, 150. 逆波兰表达式求值, 20. 有效的括号
-Redo: No
 Topic: Queue, Stack
+
+Question: 1047. 删除字符串中的所有相邻重复项, 150. 逆波兰表达式求值, 20. 有效的括号
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: December 25, 2022
+
+- [ ] Redo
+
 
 ## ****20. 有效的括号****
 
@@ -17,15 +23,15 @@ Topic: Queue, Stack
 
 1. 字符串里左方向的括号多余了 ，已经遍历完了字符串，但是栈不为空，说明有相应的左括号没有右括号来匹配，所以return false，不匹配。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2011%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%20f9fb703b23e942b9a751a8daa5677240/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209481908-261e6ee5-6d96-4325-97d1-efb96c8c5a1f.png)
 
-1. 遍历字符串匹配的过程中，发现栈里没有要匹配的字符。所以return false。
+2. 遍历字符串匹配的过程中，发现栈里没有要匹配的字符。所以return false。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2011%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%20f9fb703b23e942b9a751a8daa5677240/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/209481901-0c9172f6-4dec-49aa-8a2b-8e8af01c2dd9.png)
 
-1. 历字符串匹配的过程中，栈已经为空了，没有匹配的字符了，说明右括号没有找到对应的左括号return false。
+3. 历字符串匹配的过程中，栈已经为空了，没有匹配的字符了，说明右括号没有找到对应的左括号return false。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2011%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%20f9fb703b23e942b9a751a8daa5677240/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/209481898-fc50cb03-319f-43b0-a77b-0e4e49c55722.png)
 
 字符串遍历完之后，栈是空的，就说明全都匹配了。
 
