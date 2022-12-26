@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 13 | 栈与队列
 
-Completed: December 25, 2022
-Difficulty: Hard
-Done: Yes
-Question: 239. 滑动窗口最大值, 347. 前 K 个高频元素
-Redo: No
 Topic: Queue, Stack
+
+Question: 239. 滑动窗口最大值, 347. 前 K 个高频元素
+
+Difficulty: Hard
+
+- [x] Done
+
+Completed: December 25, 2022
+
+- [ ] Redo
+
 
 ## ****239. 滑动窗口最大值****
 
@@ -74,7 +80,7 @@ var maxSlidingWindow = function(nums, k) {
 
 寻找前k个最大元素流程如图所示：（图中的频率只有三个，所以正好构成一个大小为3的小顶堆，如果频率更多一些，则用这个小顶堆进行扫描）
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2013%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97%202a741b19ae104eafa6f49e8c10916ada/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209517344-66da77ca-f863-4121-9d75-8e42083827c6.png)
 
 具体步骤如下：
 
