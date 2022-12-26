@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 14 | 二叉树
 
-Completed: December 26, 2022
-Difficulty: Easy
-Done: Yes
-Question: 144. 二叉树的前序遍历, 145. 二叉树的后序遍历, 94. 二叉树的中序遍历
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 144. 二叉树的前序遍历, 145. 二叉树的后序遍历, 94. 二叉树的中序遍历
+
+Difficulty: Easy
+
+- [x] Done
+
+Completed: December 26, 2022
+
+- [ ] Redo
+
 
 ## ****二叉树理论基础****
 
@@ -16,7 +22,7 @@ Topic: BFS, Binary Tree, DFS
 > 如果一棵二叉树只有度为0的结点和度为2的结点，并且度为0的结点在同一层上，则这棵二叉树为满二叉树。
 > 
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209584914-cfe23210-cb83-47ca-ac63-603b22d0f9b3.png)
 
 这棵二叉树为满二叉树，也可以说深度为k，有2^k-1个节点的二叉树。
 
@@ -27,7 +33,7 @@ Topic: BFS, Binary Tree, DFS
 
 举例：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/209584937-f9172c06-63fc-4ca2-890b-265d04dbfa43.png)
 
 之前我们讲过优先级队列其实是一个堆，堆就是一棵完全二叉树，同时保证父子节点的顺序关系。
 
@@ -41,14 +47,14 @@ Topic: BFS, Binary Tree, DFS
 
 下面这两棵树都是搜索树
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/209584942-e0deebee-6050-4349-87b0-f14fa0adb935.png)
 
 ### ****平衡二叉搜索树****
 
 > 平衡二叉搜索树：又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。
 > 
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/209584952-c7c35c83-ccd1-4cc2-a286-4fcf26e9222a.png)
 
 最后一棵 不是平衡二叉树，因为它的左右两个子树的高度差的绝对值超过了1。
 
@@ -60,7 +66,7 @@ Topic: BFS, Binary Tree, DFS
 
 顺序存储的方式如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/209584964-d4269403-50b4-494f-a10a-07bb2443efc2.png)
 
 用数组来存储二叉树如何遍历的呢？
 
@@ -70,7 +76,7 @@ Topic: BFS, Binary Tree, DFS
 
 链式存储如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/209584972-234b23d2-94df-4ffe-ace0-a99cbfab6253.png)
 
 ### ****二叉树的遍历方式****
 
@@ -85,7 +91,7 @@ Topic: BFS, Binary Tree, DFS
 
 深度优先遍历举例：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/209584981-074a24c5-9476-4e8f-8a5e-932bf4cf3625.png)
 
 ### ****二叉树的定义****
 
@@ -321,7 +327,7 @@ var inorderTraversal = function(root) {
 
 先序遍历是中左右，后续遍历是左右中，只需要调整一下先序遍历的代码顺序，就变成中右左的遍历顺序，然后在反转result数组，输出的结果顺序就是左右中了，如下图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2014%20%E4%BA%8C%E5%8F%89%E6%A0%91%20382cc10da3c34855b6c6c0a4167fe860/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/101588752/209585003-e08a2116-6fdb-4027-ac59-8028101f7b1d.png)
 
 JavaScript完整代码：
 
