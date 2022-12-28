@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 16 | 二叉树
 
-Completed: December 28, 2022
-Difficulty: Medium
-Done: Yes
-Question: 104. 二叉树的最大深度, 111. 二叉树的最小深度, 222.完全二叉树的节点个数, 559. n叉树的最大深度
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 104. 二叉树的最大深度, 111. 二叉树的最小深度, 222.完全二叉树的节点个数, 559. n叉树的最大深度
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: December 28, 2022
+
+- [ ] Redo: No
+
 
 ## ****104. 二叉树的最大深度****
 
@@ -166,7 +172,7 @@ if(!root) return 0;
 
 最小深度是从根节点到最近叶子节点的最短路径上的节点数量。注意是叶子节点，左右孩子都为空的节点才是叶子节点！
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209870808-78ee6184-66ec-4959-bc52-a881a1c015cd.png)
 
 如果这么求的话，没有左孩子的分支会算为最短深度。
 
@@ -280,23 +286,23 @@ var countNodes = function(root) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/209870836-7682969f-0110-45fe-9a35-f92b76d0d6b0.png)
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/209870847-b8fa9061-a6d0-40d2-8cc5-c02f6d0aa608.png)
 
 可以看出如果整个树不是满二叉树，就递归其左右孩子，直到遇到满二叉树为止，用公式计算这个子树（满二叉树）的节点数量。
 
 在完全二叉树中，如果递归向左遍历的深度等于递归向右遍历的深度，那说明就是满二叉树。如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/209870862-d385da83-3868-41f7-b594-d54f30f69abb.png)
 
 在完全二叉树中，如果递归向左遍历的深度不等于递归向右遍历的深度，则说明不是满二叉树，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/209870872-04020d5c-127a-400a-a2c6-843d8e12ea1e.png)
 
 递归向左遍历的深度等于递归向右遍历的深度，但也不是满二叉树，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2016%20%E4%BA%8C%E5%8F%89%E6%A0%91%2009804ac00bbf4f65a22a112a3cd0d907/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/209870885-549d1582-719c-47b4-ae8c-c5b20d8df3c4.png)
 
 以上这棵二叉树，它根本就不是一个完全二叉树！
 
