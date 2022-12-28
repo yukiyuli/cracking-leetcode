@@ -1,10 +1,17 @@
 # 代码随想录算法训练 Day 15 | 二叉树
 
-Completed: December 27, 2022
+Topic: Binary Tree, DFS, BFS
+
+Questions: 102. 二叉树的层次遍历  226. 帆船二叉树  101. 对成二叉树
+
 Difficulty: Easy
-Done: Yes
-Redo: No
-Topic: BFS, Binary Tree, DFS
+
+- [x] Done: Yes
+
+Completed: December 27, 2022
+
+- [ ] Redo
+
 
 ## ****102. 二叉树的层序遍历****
 
@@ -336,7 +343,7 @@ var invertTree = function(root) {
 
 对于二叉树是否对称，要比较的是根节点的左子树与右子树是不是相互翻转的，所以在递归遍历的过程中，也是要同时遍历两棵树。如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2015%20%E4%BA%8C%E5%8F%89%E6%A0%91%2043159c3e6b1d4e5b8077999d411ce941/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209859332-e3ffbe7c-136f-4f01-8235-9706d89988aa.png)
 
 本题遍历只能是“后序遍历”，因为我们要通过递归函数的返回值来判断两个子树的内侧节点和外侧节点是否相等。准确的来说是一个树的遍历顺序是左右中，一个树的遍历顺序是右左中。
 
