@@ -6,7 +6,7 @@ Questions: 102. 二叉树的层次遍历  226. 翻转二叉树  101. 对成二�
 
 Difficulty: Easy
 
-- [x] Done: Yes
+- [x] Done
 
 Completed: December 27, 2022
 
