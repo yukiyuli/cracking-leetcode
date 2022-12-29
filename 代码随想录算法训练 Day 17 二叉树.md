@@ -1,10 +1,17 @@
 # 代码随想录算法训练 Day 17 | 二叉树
 
-Completed: December 28, 2022
-Difficulty: Easy
-Done: Yes
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Questions: 110. 平衡二叉树, 257.  二叉树的所有路径, 404. 左叶子之和
+
+Difficulty: Easy
+
+- [x] Done
+
+Completed: December 28, 2022
+
+- [ ] Redo
+
 
 ## ****110. 平衡二叉树****
 
@@ -108,7 +115,7 @@ var isBalanced = function(root) {
 
 这道题目涉及到前序遍历和回溯，过程如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2017%20%E4%BA%8C%E5%8F%89%E6%A0%91%205f5adb84888a4bd1ae04efb96f40b089/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/209912304-aea0365f-7aae-493d-847a-aebf98b7fc91.png)
 
 ### 递归法
 
@@ -214,11 +221,11 @@ var binaryTreePaths = function(root) {
 
 如下图中二叉树，左叶子之和=0，因为这棵树根本没有左叶子！
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2017%20%E4%BA%8C%E5%8F%89%E6%A0%91%205f5adb84888a4bd1ae04efb96f40b089/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/209912328-b29ca0cb-f72a-4d79-a8d7-a7dcdc57b235.png)
 
 如下图中二叉树，左叶子之和=21
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2017%20%E4%BA%8C%E5%8F%89%E6%A0%91%205f5adb84888a4bd1ae04efb96f40b089/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/209912338-18d73443-e2d2-449f-8448-2633e15a3798.png)
 
 判断当前节点是不是左叶子是无法判断的，必须要通过节点的父节点来判断其左孩子是不是左叶子。
 
