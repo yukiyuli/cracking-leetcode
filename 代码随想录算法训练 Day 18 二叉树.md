@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 18 | 二叉树
 
-Completed: December 30, 2022
-Difficulty: Medium
-Done: Yes
-Question: 105. 从前序与中序遍历序列构造二叉树, 106. 从中序与后序遍历序列构造二叉树, 112. 路径总和, 113. 路径总和ii, 513. 找树左下角的值
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 105. 从前序与中序遍历序列构造二叉树, 106. 从中序与后序遍历序列构造二叉树, 112. 路径总和, 113. 路径总和ii, 513. 找树左下角的值
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: December 30, 2022
+
+- [ ] Redo
+
 
 ## ****513. 找树左下角的值****
 
@@ -198,7 +204,7 @@ var findBottomLeftValue = function(root) {
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2018%20%E4%BA%8C%E5%8F%89%E6%A0%91%207ab1f796b50449509c92cec229613172/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210129720-f86d97e0-a9f9-4425-b3e5-979f990d0f6c.png)
 
 图中可以看出，遍历的路线，并不要遍历整棵树，所以递归函数需要返回值，用箭头函数。
 
@@ -310,7 +316,7 @@ var hasPathSum = function(root, targetSum) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2018%20%E4%BA%8C%E5%8F%89%E6%A0%91%207ab1f796b50449509c92cec229613172/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/210129726-f741c175-5aba-4790-823d-2d92d96bd1cb.png)
 
 ### ****递归法****
 
@@ -376,7 +382,7 @@ var pathSum = function(root, targetSum) {
 
 画一颗二叉树，流程如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2018%20%E4%BA%8C%E5%8F%89%E6%A0%91%207ab1f796b50449509c92cec229613172/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/210129731-4986842e-4c8f-4897-96ca-67044c1b9b80.png)
 
 一层一层切割，步骤如下：
 
