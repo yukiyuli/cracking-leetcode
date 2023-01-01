@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 21 | 二叉树
 
-Completed: January 1, 2023
-Difficulty: Easy
-Done: Yes
-Question: 236.  二叉树的最近公共祖先, 501. 二叉搜索树中的众数, 530. 二叉搜索树的最小绝对差
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 236.  二叉树的最近公共祖先, 501. 二叉搜索树中的众数, 530. 二叉搜索树的最小绝对差
+
+Difficulty: Easy
+
+- [x] Done
+
+Completed: January 1, 2023
+
+- [ ] Redo
+
 
 ## ****530. 二叉搜索树的最小绝对差****
 
@@ -19,7 +25,7 @@ Topic: BFS, Binary Tree, DFS
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210183575-363cbf34-6000-44f9-823c-63f4ec56a7ec.png)
 
 JavaScript完整代码：
 
@@ -67,7 +73,7 @@ return res;
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/210183579-23ba6294-c4da-4855-834f-7702877f4b1d.png)
 
 中序遍历代码如下：
 
@@ -198,7 +204,7 @@ var findMode = function(root) {
 
 情况一：如果找到一个节点，发现左子树出现结点p，右子树出现节点q，或者左子树出现结点q，右子树出现节点p，那么该节点就是节点p和q的最近公共祖先。如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/210183584-60520604-980a-4d99-a9f0-721f9147139c.png)
 
 判断逻辑是如果递归遍历遇到q，就将q返回，遇到p 就将p返回，那么如果左右子树的返回值都不为空，说明此时的中节点，一定是q 和p 的最近祖先。
 
@@ -207,7 +213,7 @@ var findMode = function(root) {
 
 情况二：节点本身p(q)，它拥有一个子孙节点q(p)。如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/210183586-f437836c-dacc-4753-8e28-3b9174fd86d7.png)
 
 其实情况一 和情况二 代码实现过程都是一样的，实现情况一的逻辑，顺便包含了情况二。
 
@@ -269,7 +275,7 @@ left与right的逻辑处理;         // 中
 
 本题为什么要遍历整棵树呢？如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/210183589-37c2a4e4-6e23-4a47-bfb0-52feac694151.png)
 
 就像图中一样直接返回7，多美滋滋。
 
@@ -296,7 +302,7 @@ let right = lowestCommonAncestor(root.right,p,q);
 
 为什么left为空，right不为空，目标节点通过right返回呢？
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/210183590-9ec1d06b-30dd-4085-ba5b-380ef2ae415f.png)
 
 图中节点10的左子树返回null，右子树返回目标值7，那么此时节点10的处理逻辑就是把右子树的返回值（最近公共祖先7）返回上去！
 
@@ -316,7 +322,7 @@ if(left === null && right === null) { // 若未找到节点 p 或 q
 
 完整流程图如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2021%20%E4%BA%8C%E5%8F%89%E6%A0%91%20918c397aecf0457783915cd5624701b3/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/210183593-1c97f2e3-71ab-4136-8a64-8c3b7386d3be.png)
 
 JavaScript完整代码：
 
