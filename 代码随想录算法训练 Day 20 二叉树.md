@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 20 | 二叉树
 
-Completed: December 31, 2022
-Difficulty: Easy
-Done: Yes
-Question: 617. 合并二叉树, 654. 最大二叉树, 700. 二叉搜索树中的搜索, 98. 验证二叉搜索树
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 617. 合并二叉树, 654. 最大二叉树, 700. 二叉搜索树中的搜索, 98. 验证二叉搜索树
+
+Difficulty: Easy
+
+- [x] Done
+
+Completed: December 31, 2022
+
+- [ ] Redo
+
 
 ## ****654. 最大二叉树****
 
@@ -303,7 +309,7 @@ var searchBST = function(root, val) {
 
 中间节点如果大于3就向左走，如果小于3就向右走，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2020%20%E4%BA%8C%E5%8F%89%E6%A0%91%205b99d1914817463e81781f3607d93435/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210158596-2f9640ed-2bf2-465a-99da-e3a12aeacca2.png)
 
 JavaScript完整代码：
 
