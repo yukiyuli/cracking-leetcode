@@ -158,14 +158,14 @@ var findMode = function(root) {
         traversal (cur.left); // 左
 
         // 中
-				if (!pre) { // 第一个节点
-				     count = 1;
-				} else if (pre.val ===cur.val) { // 与前一个节点数值相同
-				     count++;
-				} else { // 与前一个节点数值不同
-				     count = 1;
-				}
-				pre = cur; // 更新上一个节点
+	if (!pre) { // 第一个节点
+		count = 1;
+	} else if (pre.val ===cur.val) { // 与前一个节点数值相同
+		count++;
+	} else { // 与前一个节点数值不同
+		 count = 1;
+	}
+	pre = cur; // 更新上一个节点
 
         // 如果和最大值相同，放进result中
         if (count === maxCount) res.push(cur.val);
