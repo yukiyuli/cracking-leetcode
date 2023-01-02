@@ -239,11 +239,11 @@ var lowestCommonAncestor = function(root, p, q)
 
 如果 root === q，或者 root == =p，说明找到 q p ，则将其返回。
 
+代码如下：
+
 ```jsx
  if(root === null || root === p || root === q) return root;
 ```
-
-代码如下：
 
 1. 确定单层递归的逻辑
 
