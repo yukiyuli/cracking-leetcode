@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 22 | 二叉树
 
-Completed: January 2, 2023
-Difficulty: Medium
-Done: Yes
-Question: 235. 二叉搜索树的最近公共祖先, 450. 删除二叉搜索树中的节点, 701. 二叉搜索树中的插入操作
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+Question: 235. 二叉搜索树的最近公共祖先, 450. 删除二叉搜索树中的节点, 701. 二叉搜索树中的插入操作
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 2, 2023
+
+- [ ] Redo
+
 
 ## ****235. 二叉搜索树的最近公共祖先****
 
@@ -19,7 +25,7 @@ Topic: BFS, Binary Tree, DFS
 
 原因，如图，根节点搜索，第一次遇到 cur节点是数值在[p, q]区间中，即节点5，此时可以说明 p 和 q 一定分别存在于节点5的左子树和右子树中。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2022%20%E4%BA%8C%E5%8F%89%E6%A0%91%209859a9751dfb4761b0f8cadbdd431bfa/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210274583-98c78187-90b7-46f7-b4e9-ca0341f2619e.png)
 
 此时节点5是不是最近公共祖先？ 如果从节点5继续向左遍历，那么将错过成为q的祖先， 如果从节点5继续向右遍历则错过成为p的祖先。
 
@@ -31,7 +37,7 @@ Topic: BFS, Binary Tree, DFS
 
 如图所示：p为节点6，q为节点9
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2022%20%E4%BA%8C%E5%8F%89%E6%A0%91%209859a9751dfb4761b0f8cadbdd431bfa/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/210274593-a74de236-4e3b-43e3-a936-ed76315c5e48.png)
 
 可以看出直接按照指定的方向，就可以找到节点8，为最近公共祖先，而且不需要遍历整棵树，找到结果直接返回！
 
