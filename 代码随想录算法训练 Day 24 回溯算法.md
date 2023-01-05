@@ -1,15 +1,21 @@
 # 代码随想录算法训练 Day 24 | 回溯算法
 
-Completed: January 4, 2023
-Difficulty: Medium
-Done: Yes
-Question: 第77题. 组合
-Redo: No
 Topic: Backtrace
+
+Difficulty: Medium
+
+Question: 第77题. 组合
+
+- [x] Done
+
+Completed: January 4, 2023
+
+- [ ] Redo
+
 
 ## **回溯算法理论基础**
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210672840-1c5f9080-56fd-45d7-98de-d6cb567a965a.png)
 
 ### 什么是回溯法
 
@@ -79,7 +85,7 @@ if (终止条件) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/210672870-e1315696-af13-4746-a2db-aaf3815da93c.png)
 
 回溯函数遍历过程伪代码如下：
 
@@ -130,7 +136,7 @@ void backtracking(参数) {
 
 这时需要把组合问题抽象为如下树形结构：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/210672903-0daa94d4-7e9d-4b2d-b2f7-e7dedc946acb.png)
 
 如图所示，这棵树一开始集合是 1，2，3，4， 从左向右取数，取过的数，不再重复取。
 
@@ -162,7 +168,7 @@ let path = []; // 用来存放符合条件结果
 
 从下图中红线部分可以看出，在集合[1,2,3,4]取1之后，下一层递归，就要在[2,3,4]中取数了，那么下一层递归如何知道从[2,3,4]中取数呢，靠的就是startIndex。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/210672919-ab05c86b-5364-48e4-b383-95f8daa684ff.png)
 
 代码如下：
 
@@ -176,7 +182,7 @@ path这个数组的大小如果达到k，说明我们找到了一个子集大小
 
 如图红色部分：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/210672935-f5863638-ff37-4092-9ac9-f30991d82ff6.png)
 
 此时用result二维数组，把path保存起来，并终止本层递归。
 
@@ -192,7 +198,7 @@ if (path.length === k) {
 
 回溯法的搜索过程就是一个树型结构的遍历过程，在如下图中，可以看出for循环用来横向遍历，递归的过程是纵向遍历。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/210672948-1911df7b-b194-401a-b4c0-56d7cc9854e8.png)
 
 for循环每次从startIndex开始遍历，然后用path保存取到的节点i。
 
@@ -244,7 +250,7 @@ var combine = function (n, k) {
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2024%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2009ef36cde8814608a33e3c8733d570d2/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/210672968-233fab0d-3652-49db-b66c-eac4827f2fb5.png)
 
 图中每一个节点（图中为矩形），就代表本层的一个for循环，那么每一层的for循环从第二个数开始遍历的话，都没有意义，都是无效遍历。
 
