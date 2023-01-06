@@ -1,9 +1,13 @@
 # 代码随想录算法训练 Day 23 | 二叉树总结
 
-Completed: January 5, 2023
-Done: Yes
-Redo: No
 Topic: BFS, Binary Tree, DFS
+
+- [x] Done
+
+Completed: January 5, 2023
+
+- [ ] Redo
+
 
 ## ****二叉树的理论基础****
 
@@ -117,6 +121,7 @@ Topic: BFS, Binary Tree, DFS
 
 二叉树专题汇聚为一张图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2023%20%E4%BA%8C%E5%8F%89%E6%A0%91%E6%80%BB%E7%BB%93%20dbe4dd2a5cea49b4b1c3e02f29b223ae/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/210920670-a17b7a89-b237-4a48-b857-f35f369209e6.png)
+
 
 感谢代码随想录知识星球)成员：[青](https://wx.zsxq.com/dweb2/index/footprint/185251215558842) 提供这张总结图。
