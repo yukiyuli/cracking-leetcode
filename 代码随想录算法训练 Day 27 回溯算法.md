@@ -1,10 +1,17 @@
 # 代码随想录算法训练 Day 27 | 回溯算法
 
-Completed: January 8, 2023
-Difficulty: Medium
-Done: Yes
-Redo: No
 Topic: Backtrace
+
+Questions: 39. 组合综合， 40. 组合综合II， 131. 分割回文串
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 8, 2023
+
+- [ ] Redo
+
 
 ## ****39. 组合总和****
 
@@ -16,7 +23,7 @@ Topic: Backtrace
 
 本题搜索的过程抽象成树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/211218148-47dccbee-6f34-40c7-acba-177dee90e43b.png)
 
 注意图中叶子节点的返回条件，因为本题没有组合数量要求，仅仅是总和的限制，所以递归没有层数的限制，只要选取的元素总和超过target，就返回！
 
@@ -47,7 +54,7 @@ const backtracking = (candiates, target, sum, startIndex) =>
 
 在如下树形结构中：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/211218150-4bdf1740-f753-4e06-ad0a-eec95c598f11.png)
 
 从叶子节点可以清晰看到，终止只有两种情况，sum大于target和sum等于target。
 
@@ -120,7 +127,7 @@ var combinationSum = function (candidates, target) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/211218156-89cb7b49-c2e2-4aeb-97bf-f7e79c16c5dc.png)
 
 for循环剪枝代码如下：
 
@@ -176,7 +183,7 @@ var combinationSum = function (candidates, target) {
 
 选择过程树形结构如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/211218166-cb31b14a-6916-4af1-953d-8cb4bc68be1c.png)
 
 > 这里的used记录树层上的数是否重复
 > 
@@ -219,7 +226,7 @@ if (sum === target) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/211218172-1434daae-a6d7-41f1-abde-d2aa5d17bca6.png)
 
 图中将used的变化用橘黄色标注上，可以看出在candidates[i] == candidates[i - 1]相同的情况下：
 
@@ -228,7 +235,7 @@ if (sum === target) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/211218177-da01f7ed-556c-4858-abed-94dee25cf576.png)
 
 代码如下：
 
@@ -347,7 +354,7 @@ var combinationSum2 = function (candidates, target) {
 
 所以切割问题，也可以抽象为一棵树形结构，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/211218188-19db7c52-7f52-46de-82ed-544691e46d7b.png)
 
 递归用来纵向遍历，for循环用来横向遍历，切割线（就是图中的红线）切割到字符串的结尾位置，说明找到了一个切割方法。
 
@@ -367,7 +374,7 @@ const backtracking = (s, startIndex) =>
 
 1. 确定终止条件
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2027%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%20f261b08c1d95471b89ebffb10c86a316/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/101588752/211218198-7a33a099-f94a-4be7-9625-8370fcce3b4d.png)
 
 从树形结构的图中可以看出：切割线切到了字符串最后面，说明找到了一种切割方法，此时就是本层递归的终止条件。
 
