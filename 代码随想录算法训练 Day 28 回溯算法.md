@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 28 | 回溯算法
 
-Completed: January 10, 2023
-Difficulty: Medium
-Done: Yes
-Question: 78. 子集, 90. 子集II, 93. 复原IP地址
-Redo: No
 Topic: Backtrace
+
+Question: 78. 子集, 90. 子集II, 93. 复原IP地址
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 10, 2023
+
+- [ ] Redo
+
 
 ## ****93. 复原IP地址****
 
@@ -17,7 +23,7 @@ Topic: Backtrace
 
 切割问题可以抽象为树型结构，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2028%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2030fb8e39229044079606cf955c220a8e/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/211605658-e0e107a5-c002-4806-873a-7bcc32a5acb0.png)
 
 JavaScript完整代码：
 
@@ -65,7 +71,7 @@ var restoreIpAddresses = function(s) {
 
 以示例中nums = [1,2,3]为例把求子集抽象为树型结构，如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2028%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2030fb8e39229044079606cf955c220a8e/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/211605702-62665a8a-7707-4578-b189-14fda1b86395.png)
 
 从图中红线部分，可以看出遍历这个树的时候，把所有节点都记录下来，就是要求的子集集合。
 
@@ -149,7 +155,7 @@ var subsets = function (nums) {
 
 用示例中的[1, 2, 2] 来举例，如图所示： （**注意去重需要先对集合排序**）
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2028%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2030fb8e39229044079606cf955c220a8e/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/211605756-c7b36ac9-1fe8-444c-a4d0-fd1e9636f02a.png)
 
 从图中可以看出，同一树层上重复取2 就要过滤掉，同一树枝上就可以重复取2，因为同一树枝上元素的集合才是唯一子集！
 
