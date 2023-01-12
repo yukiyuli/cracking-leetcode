@@ -1,9 +1,13 @@
 # 代码随想录算法训练 Day 30 | 回溯法总结
 
-Completed: January 12, 2023
-Done: Yes
-Redo: No
 Topic: Backtrace
+
+- [x] Done
+
+Completed: January 12, 2023
+
+- [ ] Redo
+
 
 ## ****回溯法理论基础****
 
@@ -42,11 +46,11 @@ const backtracking =(参数)=> {
 
 本题把回溯问题抽象为树形结构，如图：for循环横向遍历，递归纵向遍历，回溯不断调整结果集。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212198497-774ff30d-ce3d-4f97-9327-6add156e466d.png)
 
 优化回溯算法只有剪枝一种方法，在[77. 组合](https://www.notion.so/Day-24-09ef36cde8814608a33e3c8733d570d2) ****中把回溯法代码做了剪枝优化，树形结构如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212198519-a450dd38-42a5-4687-a668-d585949ab0e5.png)
 
 组合问题剪枝精髓是：for循环在寻找起点的时候要有一个范围，如果这个起点到集合终止之间的元素已经不够题目要求的k个元素了，就没有必要搜索了。
 
@@ -58,11 +62,11 @@ const backtracking =(参数)=> {
 
 [216. 组合总和III](https://www.notion.so/Day-25-ef5b51363eec4550be1724d48c8ffc5b) 加了一个元素总和的限制。树形结构如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/212198543-732bed53-b2b2-4eb9-b103-7781e6015a4b.png)
 
 本题思路和之前一样，剪枝方法是将已选元素总和如果已经大于n（题中要求的和）了，那么往后遍历就没有意义了，直接剪掉，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/212198560-29db56a5-7a56-450b-9a5a-bee257d55bb2.png)
 
 本题中，还有一个地方可以剪枝，就是对for循环选择的起始范围的剪枝。在for循环加上 `i <= 9 - (k - path.length) + 1` 的限制！
 
@@ -81,7 +85,7 @@ const backtracking =(参数)=> {
 
 树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/212198656-d899bee9-eae4-4071-a75e-6e2621f3fc79.png)
 
 最后还给出了本题的剪枝优化，如下：
 
@@ -91,7 +95,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 优化后树形结构如下:
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/212198680-14c9b25b-827e-4be4-8432-d43d237cb45a.png)
 
 ### ****组合总和（三）****
 
@@ -99,7 +103,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 去重分两种：一种是“树枝去重”，另一种是“树层去重”。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/101588752/212198709-9cf4fa8b-ba41-446a-98c3-1bd43b55a49d.png)
 
 图中将used的变化用橘黄色标注上，可以看出在candidates[i] === candidates[i - 1]相同的情况下：
 
@@ -112,7 +116,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/101588752/212198731-f182c6b0-5d56-4c7d-a48f-99e16be73438.png)
 
 ## ****切割问题****
 
@@ -128,7 +132,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/101588752/212198757-0d5f8c22-019e-4937-8ec0-57e1f51628b8.png)
 
 ## **子集问题**
 
@@ -138,7 +142,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/101588752/212198790-2354de02-cae6-468a-8402-b38bb818a5bb.png)
 
 本题其实可以不需要加终止条件，因为startIndex >= nums.length，本层for循环本来也结束了，本来我们就要遍历整棵树。
 
@@ -148,7 +152,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/101588752/212198811-602ec618-0ff7-4d64-9ca3-db537c861ff4.png)
 
 ### ****递增子序列****
 
@@ -156,7 +160,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 题目 [90. 子集II](https://www.notion.so/Day-28-30fb8e39229044079606cf955c220a8e) 可以使用set针对同一父节点本层去重，但子集问题一定要排序。原因见下图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/101588752/212198851-fda87a80-2390-468d-b55d-d189564de137.png)
 
 ## **排列问题**
 
@@ -168,7 +172,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/101588752/212198882-ed5ac230-3379-4972-bd33-375ffdb54d3b.png)
 
 排列问题的不同之处：
 
@@ -181,7 +185,7 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/101588752/212198904-fb4d9d96-8420-4c4a-b6bd-9a170e558838.png)
 
 本题特殊的地方在于used[i - 1] == false也可以，used[i - 1] == true也可以！
 
@@ -201,4 +205,4 @@ for (int i = startIndex; i < candidates.length && sum + candidates[i] <= target;
 
 回溯专题汇聚为一张图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2030%20%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%80%BB%E7%BB%93%20f62a0674721a4b258235ac707fc236f4/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/101588752/212198934-81666e5b-ae0b-4988-b8ac-51e6972642f7.png)
