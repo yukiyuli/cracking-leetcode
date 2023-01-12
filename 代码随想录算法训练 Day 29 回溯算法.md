@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 29 | 回溯算法
 
-Completed: January 12, 2023
-Difficulty: Medium
-Done: Yes
-Question: 46. 全排列, 47. 全排列 II, 491. 递增子序列
-Redo: No
 Topic: Backtrace
+
+Question: 46. 全排列, 47. 全排列 II, 491. 递增子序列
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 12, 2023
+
+- [ ] Redo
+
 
 ## ****491. 递增子序列****
 
@@ -19,7 +25,7 @@ Topic: Backtrace
 
 举例[4, 7, 6, 7]，抽象为树形结构如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212138410-01b52bbf-4f68-4d8d-8d00-a7535edb2f29.png)
 
 ### ****回溯三步曲****
 
@@ -109,7 +115,7 @@ var findSubsequences = function (nums) {
 
 从图中红线部分，可以看出遍历这个树的时候，把所有节点都记录下来，就是要求的子集集合。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212138435-6db138ac-bc9c-4c59-b345-cd70194ce4e8.png)
 
 ### 回溯三步曲
 
@@ -119,7 +125,7 @@ var findSubsequences = function (nums) {
 
 但排列问题需要一个used数组，标记已经选择的元素，如图橘黄色部分所示:
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/212138455-43cf1c66-0f77-4864-b205-76c50fc39d06.png)
 
 代码如下：
 
@@ -204,7 +210,7 @@ var permute = function (nums) {
 
 以示例中的 [1,1,2]为例 （已经排序）抽象为一棵树，去重过程如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/212138489-46205044-8b77-43e5-ac58-0c1c8226b069.png)
 
 图中对同一树层，前一位（也就是nums[i-1]）如果使用过，要进行去重。
 
@@ -270,11 +276,11 @@ if (i > 0 && nums[i] === nums[i - 1] && used[i - 1] === true)
 
 用[1,1,1] 来举一个例子。树层上去重(used[i - 1] == false)，的树形结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/212138512-955fca65-0590-4b2b-b724-a72ffcd15c3a.png)
 
 树枝上去重（used[i - 1] == true）的树型结构如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2029%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%2059e505b6176947a09253010a6511c2a5/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/101588752/212138528-b77d1f99-be99-473e-b824-fdf380e730fd.png)
 
 代码如下：
 
