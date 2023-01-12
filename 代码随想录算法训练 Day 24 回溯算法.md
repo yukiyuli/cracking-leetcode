@@ -63,7 +63,7 @@ Completed: January 4, 2023
 回溯函数伪代码如下：
 
 ```jsx
-void backtracking(参数)
+const backtracking = (参数) =>
 ```
 
 - 回溯函数终止条件
