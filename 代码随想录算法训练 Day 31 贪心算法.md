@@ -1,15 +1,21 @@
 # 代码随想录算法训练 Day 31 | 贪心算法
 
-Completed: January 13, 2023
-Difficulty: Medium
-Done: Yes
-Question: 376. 摆动序列, 455. 分发饼干, 53. 最大子序和
-Redo: No
 Topic: Greedy Algorithm
+
+Question: 376. 摆动序列, 455. 分发饼干, 53. 最大子序和
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 13, 2023
+
+- [ ] Redo
+
 
 ## **贪心算法理论基础**
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2031%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205cc32c55f4e144de806bc1b59a6a7bce/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212385529-259fc5a1-8a51-43fb-bdab-2032a4842dcd.png)
 
 ### 什么是贪心
 
@@ -64,7 +70,7 @@ Topic: Greedy Algorithm
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2031%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205cc32c55f4e144de806bc1b59a6a7bce/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212385968-72071d76-7562-47fe-927d-376a88d8bd4c.png)
 
 这个例子可以看出饼干9只有喂给胃口为7的小孩，这样才是整体最优解，并想不出反例，那么就可以撸代码了。
 
@@ -103,7 +109,7 @@ var findContentChildren = function (g, s) {
 
 以[1,17,5,10,13,15,10,5,16,8]为例，如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2031%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205cc32c55f4e144de806bc1b59a6a7bce/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/212386022-16258fbc-db42-4fe0-92aa-cd754d6a6b27.png)
 
 局部最优：删除单调坡度上的节点（不包括单调坡度两端的节点），那么这个坡度就可以有两个局部峰值。
 
@@ -113,7 +119,7 @@ var findContentChildren = function (g, s) {
 
 针对序列[2,5]，可以假设为[2,2,5]，这样它就有坡度了即preDiff = 0，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2031%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205cc32c55f4e144de806bc1b59a6a7bce/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/212386067-aed68467-5548-4901-9073-359da2053aad.png)
 
 针对以上情形，result初始为1（默认最右面有一个峰值），此时curDiff > 0 && preDiff <= 0，那么result++（计算了左面的峰值），最后得到的result就是2（峰值个数为2即摆动序列长度为2）
 
