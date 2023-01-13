@@ -1,10 +1,17 @@
 # 代码随想录算法训练 Day 32 | 贪心算法
 
-Completed: January 13, 2023
-Difficulty: Medium
-Done: Yes
-Redo: No
 Topic: Greedy Algorithm
+
+Questions: 122. 买股票的最佳时机II, 55. 跳跃游戏, 45. 跳跃游戏II
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 13, 2023
+
+- [ ] Redo
+
 
 ## ****122. 买卖股票的最佳时机II****
 
@@ -28,7 +35,7 @@ Topic: Greedy Algorithm
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2032%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2003124238966546afae27d0e0879574c3/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212386786-3e41ce6a-74c3-4a31-bbc7-a1c82d99bbe8.png)
 
 第一天没有利润，至少要第二天才会有利润，所以利润的序列比股票序列少一天！
 
@@ -68,7 +75,7 @@ var maxProfit = function (prices) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2032%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2003124238966546afae27d0e0879574c3/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212386797-3f5b7be6-2d31-4570-8ea1-f852c8b0d034.png)
 
 i每次移动只能在cover的范围内移动，每移动一个元素，cover得到该元素数值（新的覆盖范围）的补充，让i继续移动下去。
 
@@ -114,7 +121,7 @@ var canJump = function (nums) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2032%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2003124238966546afae27d0e0879574c3/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/212386827-4c58fb96-9267-4675-8cfc-e34bf7727ca3.png)
 
 图中覆盖范围的意义在于，只要红色的区域，最多两步一定可以到！（不用管具体怎么跳，反正一定可以跳到）
 
@@ -165,11 +172,11 @@ var jump = function (nums) {
 
 - 如果移动下标等于当前覆盖最大距离下标， 需要再走一步（即steps++），因为最后一步一定是可以到的终点。（题目假设总是可以到达数组的最后一个位置），如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2032%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2003124238966546afae27d0e0879574c3/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/212386853-7dd8cc25-3e8a-41de-a32a-91daaee6a4c4.png)
 
 - 如果移动下标不等于当前覆盖最大距离下标，说明当前覆盖最远距离就可以直接达到终点了，不需要再走一步。如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2032%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2003124238966546afae27d0e0879574c3/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/212386890-23668245-8b77-4392-9c7d-f0990185d3f3.png)
 
 JavaScript完整代码：
 
