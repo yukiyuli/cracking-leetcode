@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 35 | 贪心算法
 
-Completed: January 16, 2023
-Difficulty: Medium
-Done: Yes
-Question: 406. 根据身高重建队列, 452. 用最少数量的箭引爆气球, 860. 柠檬水找零
-Redo: No
 Topic: Greedy Algorithm
+
+Difficulty: Medium
+
+Question: 406. 根据身高重建队列, 452. 用最少数量的箭引爆气球, 860. 柠檬水找零
+
+- [x] Done
+
+Completed: January 16, 2023
+
+- [ ] Redo
+
 
 ## ****860. 柠檬水找零****
 
@@ -76,7 +82,7 @@ var lemonadeChange = function (bills) {
 
 以图中{5,2} 为例：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2035%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2042299fd2aedc4f9ba007ab89439ed4ff/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212737531-f6aff368-e395-4dc8-a53e-cc558017eeb9.png)
 
 所以在按照身高从大到小排序后：
 
@@ -139,7 +145,7 @@ var reconstructQueue = function (people) {
 
 以题目示例： [[10,16],[2,8],[1,6],[7,12]]为例，如图：（已经排序）
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2035%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%2042299fd2aedc4f9ba007ab89439ed4ff/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212737562-ecd3aaaa-4157-493f-8272-4f61bb0ceeeb.png)
 
 可以看出首先第一组重叠气球，一定是需要一个箭，气球3，的左边界大于了 第一组重叠气球的最小右边界，所以再需要一支箭来射气球3了。
 
