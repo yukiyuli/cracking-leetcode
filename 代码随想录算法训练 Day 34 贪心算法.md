@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 34 | 贪心算法
 
-Completed: January 16, 2023
-Difficulty: Medium
-Done: Yes
-Question: 1005. K次取反后最大化的数组和, 134. 加油站, 135. 分发糖果
-Redo: No
 Topic: Greedy Algorithm
+
+Question: 1005. K次取反后最大化的数组和, 134. 加油站, 135. 分发糖果
+
+Difficulty: Medium
+
+Completed: January 16, 2023
+
+- [x] Done
+
+- [ ] Redo
+
 
 ## 1005. K次取反后最大化的数组和
 
@@ -137,7 +143,7 @@ i从0开始累加rest[i]，和记为curSum，一旦curSum小于零，说明[0, i
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2034%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205e4f271c6b4345789c16d2d7e8291489/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/212730425-62d582ce-e22c-41c1-adbe-c648a1cc8750.png)
 
 一旦[i，j] 区间和为负数，j+1后面出现更大的负数，就是更新j，那么起始位置又变成新的j+1了。
 
@@ -199,7 +205,7 @@ for (int i = 1; i < ratings.length; i++) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2034%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205e4f271c6b4345789c16d2d7e8291489/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/212730461-a48c1878-f3fe-46ea-b012-5f44f24f06e6.png)
 
 再确定左孩子大于右孩子的情况（从后向前遍历）：
 
@@ -228,7 +234,7 @@ for (int i = ratings.length - 2; i >= 0; i--) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2034%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%205e4f271c6b4345789c16d2d7e8291489/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/212730484-941cab47-1c33-4571-8f49-ebca8b9fe3ec.png)
 
 JavaScript完整代码：
 
