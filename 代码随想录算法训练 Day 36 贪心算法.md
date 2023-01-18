@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 36 | 贪心算法
 
-Completed: January 16, 2023
-Difficulty: Medium
-Done: Yes
-Question: 435. 无重叠区间, 56. 合并区间, 763. 划分字母区间
-Redo: No
 Topic: Greedy Algorithm
+
+Question: 435. 无重叠区间, 56. 合并区间, 763. 划分字母区间
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 16, 2023
+
+- [ ] Redo
+
 
 ## ****435. 无重叠区间****
 
@@ -32,7 +38,7 @@ Topic: Greedy Algorithm
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2036%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%20b4f0674b4d2340e3b8cc179721ef44d5/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/213091315-ac553b5a-0515-47ea-ab23-a75cfd4620f0.png)
 
 局部最优：优先选右边界小的区间，所以从左向右遍历，留给下一个区间的空间大一些，从而尽量避免交叉。
 
@@ -80,7 +86,7 @@ var eraseOverlapIntervals = function (intervals) {
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2036%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%20b4f0674b4d2340e3b8cc179721ef44d5/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/213091336-72276a6a-906a-48df-8d51-b783fa5ab28b.png)
 
 JavaScript完整代码：
 
@@ -132,7 +138,7 @@ var partitionLabels = function (s) {
 
 下图解释了intervals[i]的左边界在intervals[i - 1]左边界和右边界的范围内，那么一定有重复！：（注意图中区间都是按照左边界排序之后了）
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2036%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%20b4f0674b4d2340e3b8cc179721ef44d5/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/213091354-a8cebad2-5379-4108-be80-a37488dc1299.png)
 
 JavaScript完整代码：
 
