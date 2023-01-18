@@ -1,15 +1,22 @@
 # 代码随想录算法训练 Day 39 | 动态规划
 
-Completed: January 18, 2023
-Difficulty: Easy
-Done: Yes
-Question: 509. 斐波那契数, 70. 爬楼梯, 746. 使用最小花费爬楼梯
-Redo: No
 Topic: Dynamic programming
+
+Question: 509. 斐波那契数, 70. 爬楼梯, 746. 使用最小花费爬楼梯
+
+Difficulty: Easy
+
+- [x] Done
+
+Completed: January 18, 2023
+
+- [ ] Redo
+
 
 ## ****动态规划理论基础****
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%209a73f8de869044b79faf9bdf47f58e88/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/213281513-449ddb6d-63a4-4078-bc22-3513a2688c57.png)
+
 
 ### ****什么是动态规划****
 
@@ -166,7 +173,7 @@ dp[i] 可以有两个方向推出来。
 
 举例当n为5的时候，dp table（dp数组）应该是这样的：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%209a73f8de869044b79faf9bdf47f58e88/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/213281555-bc0671e6-1d36-4349-bf85-7328bb44938e.png)
 
 JavaScript完整代码：
 
