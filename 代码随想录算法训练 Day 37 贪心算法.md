@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 37 | 贪心算法
 
-Completed: January 18, 2023
-Difficulty: Medium
-Done: Yes
-Question: 738. 单调递增的数字
-Redo: No
 Topic: Greedy Algorithm
+
+Question: 738. 单调递增的数字
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 18, 2023
+
+- [ ] Redo
+
 
 ## ****738. 单调递增的数字****
 
