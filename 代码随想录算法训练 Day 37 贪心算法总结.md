@@ -73,6 +73,6 @@ Topic: Greedy Algorithm
 
 贪心专题汇聚为一张图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2037%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93%20fb075d5419e340679d26286d721ff3a6/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/213280954-57f83760-5863-41b9-b3fd-3c4ae4055177.png)
 
 感谢代码随想录知识星成员：**[海螺人](https://wx.zsxq.com/dweb2/index/footprint/844412858822412)** 所画。
