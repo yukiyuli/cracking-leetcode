@@ -1,9 +1,13 @@
 # 代码随想录算法训练 Day 37 | 贪心算法总结
 
-Completed: January 18, 2023
-Done: Yes
-Redo: No
 Topic: Greedy Algorithm
+
+- [x] Done
+
+Completed: January 18, 2023
+
+- [ ] Redo
+
 
 ## ****贪心理论基础****
 
