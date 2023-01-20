@@ -1,4 +1,4 @@
-# 代码随想录算法训练 Day 39 | 动态规划
+# 代码随想录算法训练 Day 38 | 动态规划
 
 Topic: Dynamic programming
 
