@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 39 | 动态规划
 
-Completed: January 19, 2023
-Difficulty: Medium
-Done: Yes
-Question: 62. 不同路径, 63. 不同路径 II
-Redo: No
 Topic: Dynamic programming
+
+Question: 62. 不同路径, 63. 不同路径 II
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 19, 2023
+
+- [ ] Redo
+
 
 ## ****62. 不同路径****
 
@@ -46,7 +52,7 @@ for (let j = 0; j < n; j++) dp[0][j] = 1;
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%201cdb1ac055524637b61033393f8860e5/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/213626723-54dce927-b43d-44d5-bec8-9be7482afd0d.png)
 
 JavaScript完整代码：
 
@@ -111,7 +117,7 @@ if (obstacleGrid[i][j] === 0) { // 当(i, j)没有障碍的时候，再推导dp[
 
 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%201cdb1ac055524637b61033393f8860e5/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/213626758-2c124300-57d8-4aac-988f-233014153adc.png)
 
 下标(0, j)的初始化情况同理。
 
@@ -145,11 +151,11 @@ for (let i = 1; i < m; i++) {
 
 拿示例1来举例如题：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%201cdb1ac055524637b61033393f8860e5/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/213626787-20369765-6c9c-4d12-8eec-12452752569d.png)
 
 对应的dp table 如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2039%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%201cdb1ac055524637b61033393f8860e5/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/213626804-10cdd9cb-b317-43b3-8409-e30358986772.png)
 
 JavaScript完整代码：
 
