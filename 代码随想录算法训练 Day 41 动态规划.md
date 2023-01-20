@@ -1,11 +1,16 @@
 # 代码随想录算法训练 Day 41 | 动态规划
 
-Completed: January 19, 2023
-Difficulty: Medium
-Done: Yes
-Question: 343. 整数拆分, 96. 不同的二叉搜索树
-Redo: No
 Topic: Dynamic programming
+
+Question: 343. 整数拆分, 96. 不同的二叉搜索树
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 19, 2023
+
+- [ ] Redo
 
 ## ****343. 整数拆分****
 
@@ -69,7 +74,7 @@ i是从3开始，这样dp[i - j]就是dp[2]正好可以通过我们初始化的�
 
 举例当n为10 的时候，dp数组里的数值，如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2041%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%202a445c2fd4c347d1b6a309fd12efb28a/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/213627074-8b2cc17b-3fee-459e-8789-73f962df1bc3.png)
 
 JavaScript完整代码：
 
@@ -102,11 +107,11 @@ var integerBreak = function (n) {
 
 n为1的时候有一棵树，n为2有两棵树，这个是很直观的。如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2041%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%202a445c2fd4c347d1b6a309fd12efb28a/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/213627098-e7e81353-b956-4d27-a077-983e30e41992.png)
 
 来看看n为3的时候，有哪几种情况。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2041%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%202a445c2fd4c347d1b6a309fd12efb28a/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/213627107-13f88713-a43a-4b12-a650-4c48a8532180.png)
 
 当1为头结点的时候，其右子树有两个节点，这两个节点的布局，和 n 为2的时候两棵树的布局是一样！
 
@@ -140,7 +145,7 @@ dp[3]，就是 元素1为头结点搜索树的数量 + 元素2为头结点搜索
 
 如图所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2041%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%202a445c2fd4c347d1b6a309fd12efb28a/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/213627123-7cbec5f2-c79d-4a0c-8e5c-a29ec2e56baf.png)
 
 动规五部曲：
 
@@ -184,7 +189,7 @@ for (let i = 1; i <= n; i++) {
 
 举例n为5时候的dp数组状态，如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2041%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%202a445c2fd4c347d1b6a309fd12efb28a/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/213627138-cfb29f33-9513-4e1f-99d1-d20f4c622533.png)
 
 JavaScript完整代码：
 
