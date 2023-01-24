@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 43 | 动态规划
 
-Completed: January 24, 2023
-Difficulty: Medium
-Done: Yes
-Question: 1049. 最后一块石头的重量 II, 474. 一和零, 494. 目标和
-Redo: No
 Topic: Dynamic programming
+
+Question: 1049. last-stone-weight-II, 474. ones-and-zeroes, 494. target-sum
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 24, 2023
+
+- [ ] Redo
+
 
 ## ****1049. 最后一块石头的重量 II****
 
@@ -31,7 +37,7 @@ dp[j]表示容量（这里说容量更形象，其实就是重量）为j的背�
 
 相对于 01背包，本题中，石头的重量是 stones[i]，石头的价值也是 stones[i] ，可以 “最多可以装的价值为 dp[j]” == “最多可以背的重量为dp[j]”
 
-1. 确定递推公式
+2. 确定递推公式
 
 01背包的递推公式为：dp[j] = Math.max(dp[j], dp[j - weight[i]] + value[i]);
 
@@ -39,7 +45,7 @@ dp[j]表示容量（这里说容量更形象，其实就是重量）为j的背�
 
 所以递推公式：dp[j] = Math.max(dp[j], dp[j - nums[i]] + nums[i]);
 
-1. dp数组如何初始化
+3. dp数组如何初始化
 
 既然 dp[j]中的j表示容量，那么最大容量（重量）就是所有石头的重量和。
 
@@ -59,7 +65,7 @@ let target = Math.floor(sum / 2);
 let dp = Array(target + 1).fill(0);
 ```
 
-1. 确定遍历顺序
+4. 确定遍历顺序
 
 在01背包问题，一维dp数组（滚动数组）中就已经说明：如果使用一维dp数组，物品遍历的for循环放在外层，遍历背包的for循环放在内层，且内层for循环倒序遍历！
 
@@ -73,11 +79,11 @@ for (int i = 0; i < stones.length; i++) { // 遍历物品
 }
 ```
 
-1. 举例推导dp数组
+5. 举例推导dp数组
 
 举例，输入：[2,4,1,1]，此时target = (2 + 4 + 1 + 1)/2 = 4 ，dp数组状态图如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2043%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2063866f92bccb4a588a467cd928ae5391/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/214338346-be75b2e4-36e8-47f6-8d7e-31e9a00bb405.png)
 
 最后dp[target]里是容量为target的背包所能背的最大重量。
 
@@ -219,7 +225,7 @@ bagSize = (S + sum) / 2 = (3 + 5) / 2 = 4
 
 dp数组状态变化如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2043%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2063866f92bccb4a588a467cd928ae5391/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/214338955-dbdb6f3a-814d-4a7a-8df2-6c307da0f0f4.png)
 
 JavaScript完整代码：
 
@@ -254,7 +260,7 @@ var findTargetSumWays = function (nums, target) {
 
 先捋清几种背包的关系。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2043%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2063866f92bccb4a588a467cd928ae5391/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/214338998-100230d8-c226-48ba-bd51-7012892c8a47.png)
 
 本题会被误以为是多重背包，但其实并不是，多重背包是每个物品，数量不同的情况。
 
@@ -315,7 +321,7 @@ for (let str of strs) { // 遍历物品
 
 最后dp数组的状态如下所示：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2043%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2063866f92bccb4a588a467cd928ae5391/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/214339050-235b3de3-d812-4659-8013-2b44b22b4740.png)
 
 JavaScript完整代码：
 
