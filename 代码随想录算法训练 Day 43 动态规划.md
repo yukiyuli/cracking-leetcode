@@ -72,8 +72,8 @@ let dp = Array(target + 1).fill(0);
 所以遍历顺序为：
 
 ```jsx
-for (int i = 0; i < stones.length; i++) { // 遍历物品
-    for (int j = target; j >= stones[i]; j--) { // 遍历背包
+for (let i = 0; i < stones.length; i++) { // 遍历物品
+    for (let j = target; j >= stones[i]; j--) { // 遍历背包
         dp[j] = Math.max(dp[j], dp[j - stones[i]] + stones[i]);
     }
 }
