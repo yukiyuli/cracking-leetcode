@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 44 | 动态规划
 
-Completed: January 25, 2023
-Difficulty: Medium
-Done: Yes
-Question: 377.  组合总和 Ⅳ, 518. 零钱兑换 II
-Redo: No
 Topic: Dynamic programming
+
+Question: 377. combination-sum Ⅳ, 518. coin-change II
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 25, 2023
+
+- [ ] Redo
+
 
 ## ****完全背包****
 
@@ -58,7 +64,7 @@ for(let i = 0; i < weight.length; i++) { // 遍历物品
 
 dp状态图如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2044%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20c85f5f15441b4773b8f64a815c8eeaaa/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/214669228-6071af20-f9ea-4598-b8a5-0e33ea114a52.png)
 
 这里还有一个很重要的问题，为什么遍历物品在外层循环，遍历背包容量在内层循环？
 
@@ -68,11 +74,11 @@ dp状态图如下：
 
 遍历物品在外层循环，遍历背包容量在内层循环，状态如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2044%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20c85f5f15441b4773b8f64a815c8eeaaa/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/214669269-29d8352a-d908-4221-92fc-9794f97af9e4.png)
 
 遍历背包容量在外层循环，遍历物品在内层循环，状态如图：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2044%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20c85f5f15441b4773b8f64a815c8eeaaa/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/101588752/214669298-f2212a81-ad76-4096-a779-7fe836bb58ef.png)
 
 看了这两个图，就会理解，完全背包中，两个for循环的先后循序，都不影响计算dp[j]所需要的值（这个值就是下标j之前所对应的dp[j]）。
 
@@ -201,7 +207,7 @@ for (let j = 0; j <= amount; j++) { // 遍历背包容量
 
 输入: amount = 5, coins = [1, 2, 5] ，dp状态图如下：最后红色框dp[amount]为最终结果。
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2044%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20c85f5f15441b4773b8f64a815c8eeaaa/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/101588752/214669439-80426835-81e0-4665-bc63-03937893ee62.png)
 
 JavaScript完整代码：
 
@@ -275,7 +281,7 @@ dp[i]（考虑nums[j]）可以由 dp[i - nums[j]]（不考虑nums[j]） 推导�
 
 我们再来用示例中的例子推导一下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2044%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20c85f5f15441b4773b8f64a815c8eeaaa/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/101588752/214669521-2dfb803f-7005-4e91-a0d9-e697b88ac31d.png)
 
 JavaScript完整代码：
 
