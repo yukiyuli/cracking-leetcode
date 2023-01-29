@@ -1,11 +1,17 @@
 # 代码随想录算法训练 Day 45 | 动态规划
 
-Completed: January 29, 2023
-Difficulty: Medium
-Done: Yes
-Question: 279. 完全平方数, 322. 零钱兑换, 70. 爬楼梯
-Redo: No
 Topic: Dynamic programming
+
+Question: 279. perfect-squares, 322. coin-change, 70. climbing-stairs
+
+Difficulty: Medium
+
+- [x] Done
+
+Completed: January 29, 2023
+
+- [ ] Redo
+
 
 ## ****70. 爬楼梯****
 
@@ -120,7 +126,7 @@ dp[j]：凑足总额为j所需钱币的最少个数为dp[j]。
 
 以输入：coins = [1, 2, 5], amount = 5为例
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2045%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%208a38fb89400d424d80661c8cb8fbd74b/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/215352731-c37ed0b3-ad9d-4ea4-aa11-a3d981bf0cbd.png)
 
 JavaScript完整代码：
 
@@ -185,9 +191,10 @@ dp[0]表示 和为0的完全平方数的最小数量，那么dp[0]一定是0。
 
 已输入n为5例，dp状态图如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2045%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%208a38fb89400d424d80661c8cb8fbd74b/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/215352745-8df0a77a-8422-4ed5-aeac-3633fa7dd945.png)
 
-dp[0] = 0 dp[1] = min(dp[0] + 1) = 1 dp[2] = min(dp[1] + 1) = 2 dp[3] = min(dp[2] + 1) = 3 dp[4] = min(dp[3] + 1, dp[0] + 1) = 1 dp[5] = min(dp[4] + 1, dp[1] + 1) = 2
+dp[0] = 0 dp[1] ![Uploading Untitled 1.png…]()
+= min(dp[0] + 1) = 1 dp[2] = min(dp[1] + 1) = 2 dp[3] = min(dp[2] + 1) = 3 dp[4] = min(dp[3] + 1, dp[0] + 1) = 1 dp[5] = min(dp[4] + 1, dp[1] + 1) = 2
 
 最后的dp[n]为最终结果。
 
