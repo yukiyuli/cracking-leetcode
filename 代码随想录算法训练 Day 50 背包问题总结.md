@@ -1,13 +1,17 @@
 # 代码随想录算法训练 Day 50 | 背包问题总结
 
-Completed: January 29, 2023
-Done: Yes
-Redo: No
 Topic: Dynamic programming
+
+- [x] Done
+
+Completed: January 29, 2023
+
+- [ ] Redo
+
 
 关于这几种常见的背包，其关系如下：
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2050%20%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%2081ab1d2fbefc4eae9ece1985f9634160/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/101588752/215353075-e4c8689e-a266-4a28-ae2f-3c7a884ee316.png)
 
 背包五部曲：
 
@@ -73,6 +77,6 @@ Topic: Dynamic programming
 
 ## 总结
 
-![Untitled](%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%20Day%2050%20%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%2081ab1d2fbefc4eae9ece1985f9634160/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/101588752/215353083-ab5af152-eb04-4f1f-9df2-ee96c74b75f3.png)
 
 这个图是 **[代码随想录知识星球](https://programmercarl.com/other/kstar.html)** 成员：**[海螺人](https://wx.zsxq.com/dweb2/index/footprint/844412858822412)** 所画。
